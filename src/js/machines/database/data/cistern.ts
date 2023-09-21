@@ -34,8 +34,8 @@ export default defineMachine({
 		},
 		capacity: {
 			name: "capacity",
-			cost: count => Math.pow(5, count) * 25,
-			max: 5,
+			cost: count => Math.pow(5, count) * 3, //25
+			max: 15, //5
 			title: "Capacity",
 			description: "Incrcease Water capacity",
 			effect: count => Math.pow(2, count - 1) + count + 0.5,
@@ -43,8 +43,8 @@ export default defineMachine({
 		},
 		velocity: {
 			name: "velocity",
-			cost: count => Math.pow(4, count) * 30,
-			max: 6,
+			cost: count => Math.pow(4, count) * 5,//30
+			max: 50,//6
 			title: "Velocity",
 			description: "Increase Water production",
 			effect: count => Math.pow(1.5, count) + 1.5 * count,
