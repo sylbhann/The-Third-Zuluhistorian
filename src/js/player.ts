@@ -16,6 +16,7 @@ type FileEventTarget = EventTarget & { files: FileList };
 type FileEvent = Event & { target: FileEventTarget };
 
 export const Player = {
+	// Default Player Start - Edit these values for testing if required
 	defaultStart(): PlayerType {
 		return {
 			money: 0,
