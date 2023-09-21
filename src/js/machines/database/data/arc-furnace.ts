@@ -9,24 +9,24 @@ const metals = ["iron", "lead", "copper", "silver", "gold", "quicksilver"];
 
 const recipes: Recipe[] = [
 	{
-		input: { resource: "clay", amount: 1 },
+		input: { resource: "clay", amount: 0.1 },
 		output: { resource: "bricks", amount: 1 },
-		energyUsage: 0.08,
+		energyUsage: 0.02,
 	},
 	{
-		input: { resource: "water", amount: 1.5 },
+		input: { resource: "water", amount: 0.15 },
 		output: { resource: "steam", amount: 1.5 },
-		energyUsage: 0.08,
+		energyUsage: 0.04,
 	},
 	{
-		input: { resource: "sand", amount: 1 },
+		input: { resource: "sand", amount: 0.1 },
 		output: { resource: "glass", amount: 0.7 },
-		energyUsage: 0.15,
+		energyUsage: 0.06,
 	},
 	{
-		input: { resource: "stone", amount: 0.5 },
-		output: { resource: "lava", amount: 0.1 },
-		energyUsage: 0.5,
+		input: { resource: "stone", amount: 0.25 },
+		output: { resource: "lava", amount: 2.0 },
+		energyUsage: 0.15,
 	},
 	{
 		input: { resource: "none", amount: 0 },
@@ -99,8 +99,8 @@ export default defineMachine({
 		},
 		{
 			accepts: ["fire"],
-			capacity: () => 20,
-			consumes: () => 0.02,
+			capacity: () => 40,
+			consumes: () => 0.01,
 			label: "Catalyst\n(5 Fire)",
 			isUnlocked: machine => Boolean(machine.upgrades.cat.effect),
 		},
@@ -127,7 +127,7 @@ export default defineMachine({
 	upgrades: {
 		cat: {
 			name: "cat",
-			cost: 12,
+			cost: 25,
 			currencyType: "lava",
 			max: 1,
 			title: "Catalysis",
@@ -142,6 +142,15 @@ export default defineMachine({
 			max: 5,
 			title: "Plater",
 			description: "Increase operation speed but only increases Energy usage at sqrt the rate",
+			effect: count => Math.pow(1.3, count),
+		},
+		powah: {
+			name: "powah",
+			cost: 60,
+			currencyType: "energy",
+			max: 40,
+			title: "Powah",
+			description: "Increase operation speed",
 			effect: count => Math.pow(1.3, count),
 		},
 	},
