@@ -174,7 +174,7 @@ const CurrenciesDB: Record<ResourceType, CurrencyDBEntry> = {
 	},
 	quicksilver: {
 		colour: "#876874",
-		value: 200,
+		value: 200000,
 		description: "The element of Sol. The endpoint of transmutation.",
 	},
 	purity: {
@@ -186,8 +186,7 @@ const CurrenciesDB: Record<ResourceType, CurrencyDBEntry> = {
 	elixir: {
 		colour: "#6f2eb0",
 		value: 0,
-		description: "consumeCONSUMEconsumeCONSUMEconsume",
-		hint: "consumeCONSUMEconsumeCONSUMEconsume",
+		description: "The Final Element",
 	},
 };
 
