@@ -53,7 +53,8 @@ export const Player = {
 			}
 		};
 	},
-	storageKey: "igj2022-scarlet-summer-alterhistorian2",
+	// Original storagekey: igj2022-scarlet-summer-alterhistorian2
+	storageKey: "the-third-zuluhistorian",
 	load(playerObj?: any) {
 		Object.assign(player, Player.defaultStart());
 		if (playerObj) {
