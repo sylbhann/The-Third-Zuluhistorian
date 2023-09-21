@@ -151,7 +151,9 @@ export default defineMachine({
 			max: 40,
 			title: "Powah",
 			description: "Increase operation speed",
-			effect: count => Math.pow(1.3, count),
+			// effect: count => Math.pow(1.3, count),
+			effect: count => [Math.pow(1.5, count) + count * 0.5, Math.pow(1.1, count) + count * 0.2],
+			formatEffect: () => "",
 		},
 	},
 	customLoop(diff) {
@@ -159,5 +161,5 @@ export default defineMachine({
 		this.meta.catalystActive = (this.inputItem(2)?.amount ?? 0) >= 5;
 		Machine.tickThisMachine(this, diff);
 	},
-	description: `Arc furnace. Takes in Energy and the item to be heated.`,
+	description: `The Arc Furnace is more powerful than the Basic Furnace. Takes Energy to use.`,
 });
