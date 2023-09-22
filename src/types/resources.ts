@@ -1,27 +1,28 @@
+/*"earth","water","clay","wood","bricks","stone","coal","steam","energy","fire","essence","sand","glass","lava","stoneDust","vitriol","iron","lead","copper","silver","gold","quicksilver","purity","elixir"*/
 export const ResourceTypes = [
 	"earth",
 	"water",
 	"clay",
-	"wood",
+	"lumber",//wood
 	"bricks",
 	"stone",
 	"coal",
 	"steam",
-	"energy",
+	"plasma",//energy
 	"fire",
-	"essence",
+	"crystal",//essence
 	"sand",
 	"glass",
 	"lava",
-	"stoneDust",
-	"vitriol",
-	"iron",
-	"lead",
-	"copper",
-	"silver",
-	"gold",
-	"quicksilver",
-	"purity",
+	"dust",//stoneDust
+	"fuel",//vitriol
+	"copper",//iron
+	"tin",//lead
+	"bronze",//copper
+	"iron",//silver
+	"thorium",//gold
+	"platinum",//quicksilver
+	"mithril",//purity
 	"elixir",
 ] as const;
 
