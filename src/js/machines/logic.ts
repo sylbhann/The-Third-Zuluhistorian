@@ -19,7 +19,7 @@ export const Machine = {
 	get timeSpeedFactor() {
 		return player.fastTime < 180 ? 2 : Math.min(player.fastTime / 90, 9);
 	},
-	offlineEfficiency: 0.4,
+	offlineEfficiency: 100.4,//0.04+++++++++++++++++++++
 	gameLoop(realDiff: number, machines: MachineObjectType[][] = []) {
 		let diff = Math.min(realDiff, 1);
 		if (diff === 1) player.fastTime += realDiff - 1;
@@ -112,7 +112,7 @@ export const Machine = {
 	},
 	add(townName: TownType, type: MachineId, x: number, y: number) {
 		const machines = player.towns[townName].machines;
-		if (Object.values(machines).length >= 50) {
+		if (Object.values(machines).length >= 80) {
 			Modals.message.showText("Reached machine cap in this town!");
 			return false;
 		}
@@ -163,7 +163,7 @@ export const Pipe = {
 	},
 	get capacityPerSecond() {
 		return this.isUnlocked ? Towns("home").upgrades.pipesSpeed1.effectOrDefault(1) *
-			Towns("home").upgrades.pipesSpeed2.effectOrDefault(1) * 0.02
+			Towns("home").upgrades.pipesSpeed2.effectOrDefault(1) * 0.2//0.02
 			: 0;
 	},
 	tickPipes(machine: MachineObjectType, diff: number) {
