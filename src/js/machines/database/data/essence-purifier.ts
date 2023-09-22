@@ -11,14 +11,14 @@ import { run } from "@/utils";
 
 const recipes: Recipe<MetaConfiguredMachine<"power", any>>[] = [
 	{
-		input: { resource: "coal", amount: 0.3 },
+		input: { resource: "coal", amount: 0.05 },
 		output: { resource: "fire", amount: 0.2 },
 		energyUsage: 0.3,
 	},
 	{
-		input: { resource: "energy", amount: 0.25 },
-		output: { resource: "essence", amount: 0.02 },
-		energyUsage: 0.15,
+		input: { resource: "energy", amount: 0.15 },
+		output: { resource: "essence", amount: 0.5 },
+		energyUsage: 0.05,
 	},
 	{
 		input: { resource: "lava", amount: 0.2 },
